@@ -1,13 +1,13 @@
 {
 	"name": "icon-badges",
-	"version": "1.1.09",
+	"version": "1.2.1",
 	"title": "Icon Badges",
 	"author": "Galdoc",
-	"factorio_version": "1.1",
+	"factorio_version": "2.0",
   "package":{
 		"ignore":[ "dev/**", "*.py", "*.md" ]
   },
 	"dependencies": [
-		"base >= 1.1"
+		"base >= 2.0"
 	]
 }

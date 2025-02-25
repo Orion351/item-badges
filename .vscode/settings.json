@@ -1,20 +1,13 @@
 {
-  "factorio.versions": [
-    {
-      "name": "factorio",
-      "factorioPath": "d:\\Games\\Steam\\steamapps\\common\\Factorio\\bin\\x64\\factorio.exe",
-      "active": true
-    }
-  ],
-  "Lua.workspace.library": [
-    "d:\\Games\\Steam\\steamapps\\common\\Factorio\\data"
-  ],
-  
-  "Lua.workspace.checkThirdParty": "ApplyInMemory",
-  
-  "Lua.workspace.userThirdParty": [
-    "c:\\Users\\derri\\AppData\\Roaming\\Code\\User\\workspaceStorage\\6db30f81cad1d9fe03e587e2fbe79559\\justarandomgeek.factoriomod-debug\\sumneko-3rd",
-    "c:\\Users\\derri\\AppData\\Roaming\\Code\\User\\workspaceStorage\\9ece228f901a244cf80ad954ec860a9f\\justarandomgeek.factoriomod-debug\\sumneko-3rd",
-    "c:\\Users\\derri\\AppData\\Roaming\\Code\\User\\workspaceStorage\\b91ff9957cae5b7ce97c2dace1b050f6\\justarandomgeek.factoriomod-debug\\sumneko-3rd"
-  ]
+    "factorio.versions": [
+        {
+            "name": "Steam",
+            "factorioPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Factorio\\bin\\x64\\factorio.exe",
+            "active": true
+        }
+    ],
+    "Lua.workspace.userThirdParty": [
+        "c:\\Users\\derri\\AppData\\Roaming\\Code\\User\\workspaceStorage\\bb99491b83bfff359e8cc9fff40ae784\\justarandomgeek.factoriomod-debug\\sumneko-3rd"
+    ],
+    "Lua.workspace.checkThirdParty": "ApplyInMemory"
 }
