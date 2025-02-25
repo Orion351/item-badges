@@ -4,7 +4,7 @@
 -- This is an example of how to structure badge data. Badge_list is a table of groups in data.raw (fluid, recipe, item, and 
 --   child-of-item prototypes) and each table pairs a prototype name with ib_data properties.
 
-Badge_list = {}
+local Badge_list = {}
 
 -- Item prototypes
 Badge_list["item"] = {
@@ -37,26 +37,24 @@ Badge_list["item"] = {
   ["splitter"]                        = {ib_let_badge = "Y",  },
   ["fast-splitter"]                   = {ib_let_badge = "R",  },
   ["express-splitter"]                = {ib_let_badge = "B",  },
+  ["loader"]                          = {ib_let_badge = "Y",  },
+  ["fast-loader"]                     = {ib_let_badge = "R",  },
+  ["express-loader"]                  = {ib_let_badge = "B",  },
 
   -- Circuits
   ["electronic-circuit"]              = {ib_let_badge = "G",  },
   ["advanced-circuit"]                = {ib_let_badge = "R",  },
   ["processing-unit"]                 = {ib_let_badge = "B",  },
 
-  -- Wire
-  ["red-wire"]                        = {ib_let_badge = "R",  },
-  ["green-wire"]                      = {ib_let_badge = "G",  },
-  ["copper-cable"]                    = {ib_let_badge = "Cu", },
-  
   -- Chests
-  ["logistic-chest-active-provider"]  = {ib_let_badge = "A",  },
-  ["logistic-chest-passive-provider"] = {ib_let_badge = "P",  },
-  ["logistic-chest-storage"]          = {ib_let_badge = "S",  },
-  ["logistic-chest-buffer"]           = {ib_let_badge = "B",  },
-  ["logistic-chest-requester"]        = {ib_let_badge = "R",  },
+  ["active-provider-chest"]           = {ib_let_badge = "A",  },
+  ["passive-provider-chest"]          = {ib_let_badge = "P",  },
+  ["storage-chest"]                   = {ib_let_badge = "S",  },
+  ["buffer-chest"]                    = {ib_let_badge = "B",  },
+  ["requester-chest"]                 = {ib_let_badge = "R",  },
 
   -- Barrels
-  ["empty-barrel"]                    = {ib_let_badge = "E",  },
+  ["barrel"]                          = {ib_let_badge = "EB", },
   ["crude-oil-barrel"]                = {ib_let_badge = "C",  },
   ["water-barrel"]                    = {ib_let_badge = "W",  },
   ["light-oil-barrel"]                = {ib_let_badge = "L",  },
@@ -72,11 +70,9 @@ Badge_list["item"] = {
   -- Inserter
   ["burner-inserter"]                 = {ib_let_badge = "B",  },
   ["inserter"]                        = {ib_let_badge = "I",  },
-  ["fast-inserter"]                   = {ib_let_badge = "Fa", },
+  ["fast-inserter"]                   = {ib_let_badge = "F",  },
   ["long-handed-inserter"]            = {ib_let_badge = "LH", },
-  ["filter-inserter"]                 = {ib_let_badge = "Fi", },
-  ["stack-inserter"]                  = {ib_let_badge = "S",  },
-  ["stack-filter-inserter"]           = {ib_let_badge = "SF", },
+  ["bulk-inserter"]                   = {ib_let_badge = "Bk"  },
 
   -- Equipment
   ["energy-shield-equipment"]         = {ib_let_badge = "1",  },
@@ -107,9 +103,9 @@ Badge_list["tool"] = {
 
 Badge_list["module"] = {
   -- Effectivity
-  ["effectivity-module"]              = {ib_let_badge = "E",  },
-  ["effectivity-module-2"]            = {ib_let_badge = "E",  },
-  ["effectivity-module-3"]            = {ib_let_badge = "E",  },
+  ["efficiency-module"]              = {ib_let_badge = "E",  },
+  ["efficiency-module-2"]            = {ib_let_badge = "E",  },
+  ["efficiency-module-3"]            = {ib_let_badge = "E",  },
   
   -- Productivity
   ["productivity-module"]             = {ib_let_badge = "P",  },
@@ -182,18 +178,19 @@ Badge_list["fluid"] = {
   ["lubricant"]                       = {ib_let_badge = "Lu"  },
   ["petroleum-gas"]                   = {ib_let_badge = "P",  },
   ["sulfuric-acid"]                   = {ib_let_badge = "SA", },
+  ["steam"]                           = {ib_let_badge = "St", },
 }
 
 -- Recipe prototype
 Badge_list["recipe"] = {
   -- Fill Barrels
-  ["fill-crude-oil-barrel"]           = {ib_let_badge = "C",  ib_let_corner = "left-bottom"},
-  ["fill-water-barrel"]               = {ib_let_badge = "W",  ib_let_corner = "left-bottom"},
-  ["fill-light-oil-barrel"]           = {ib_let_badge = "L",  ib_let_corner = "left-bottom"},
-  ["fill-heavy-oil-barrel"]           = {ib_let_badge = "H",  ib_let_corner = "left-bottom"},
-  ["fill-lubricant-barrel"]           = {ib_let_badge = "Lu", ib_let_corner = "left-bottom"},
-  ["fill-petroleum-gas-barrel"]       = {ib_let_badge = "P",  ib_let_corner = "left-bottom"},
-  ["fill-sulfuric-acid-barrel"]       = {ib_let_badge = "SA", ib_let_corner = "left-bottom"},
+  ["crude-oil-barrel"]           = {ib_let_badge = "C",  ib_let_corner = "left-bottom"},
+  ["water-barrel"]               = {ib_let_badge = "W",  ib_let_corner = "left-bottom"},
+  ["light-oil-barrel"]           = {ib_let_badge = "L",  ib_let_corner = "left-bottom"},
+  ["heavy-oil-barrel"]           = {ib_let_badge = "H",  ib_let_corner = "left-bottom"},
+  ["lubricant-barrel"]           = {ib_let_badge = "Lu", ib_let_corner = "left-bottom"},
+  ["petroleum-gas-barrel"]       = {ib_let_badge = "P",  ib_let_corner = "left-bottom"},
+  ["sulfuric-acid-barrel"]       = {ib_let_badge = "SA", ib_let_corner = "left-bottom"},
 
   -- Empty Barrels
   ["empty-crude-oil-barrel"]          = {ib_let_badge = "C",  ib_let_corner = "left-bottom"},
@@ -213,7 +210,13 @@ Badge_list["recipe"] = {
   ["nuclear-fuel"]                    = {ib_let_badge = "NF", },
 }
 
+Badge_list["virtual-signal"] = {
+  
+}
 
+return Badge_list
+
+-- Planets / space locations / asteroids? / etc.
 
 -- debug stuff
 -- ***********

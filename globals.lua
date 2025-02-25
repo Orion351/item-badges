@@ -3,7 +3,7 @@
 Ib_global = {}
 
 -- Badge Vanilla?
-Ib_global.badge_vanilla                     = true
+Ib_global.perform_default_badging                     = true
 
 -- Debug and Logging
 Ib_global.debug                             = false

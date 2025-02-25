@@ -1,3 +1,18 @@
+-- Table Function
+-- **************
+--- @param t1 table
+--- @param t2 table
+function table.merge(t1, t2)
+  local new_table = {}
+  for k, v in pairs(t1) do
+    new_table[k] = v
+  end
+  for k, v in pairs(t2) do
+    new_table[k] = v
+  end
+  return new_table
+end
+
 -- Helper functions
 -- ****************
 function Corner_to_direction(corner)

@@ -206,7 +206,7 @@ K2_badge_list["recipe"] = {
   ["imersite-powder"]                 = {ib_let_badge = "Im", },
 }
 
-if Ib_global.badge_vanilla then
+if Ib_global.perform_default_badging then
   for subListName, subList in pairs(K2_badge_list) do
     for itemName, ib_data in pairs(subList) do
       if data.raw[subListName][itemName] then
