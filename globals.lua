@@ -11,15 +11,15 @@ Ib_global.log_errors                        = true
 Ib_global.log_prefix                        = "Icon Badges Error: "
 
 -- Graphical variables
-Ib_global.default_badge_shift_icon          = {-13, -13}
+Ib_global.default_badge_shift_icon          = {-13, -13} -- {-13, -13}
 Ib_global.default_badge_shift_icon_adjust   = {5.5, 5.5} -- FIXME: WHAT HAPPENED HERE
-Ib_global.default_badge_icon_scale          = .3125
+Ib_global.default_badge_icon_scale          = .3125 -- .3125
 
-Ib_global.default_badge_scale_picture       = Ib_global.default_badge_icon_scale / 2
-Ib_global.default_badge_shift_picture       = {0.25, 0.25}
+Ib_global.default_badge_scale_picture       = Ib_global.default_badge_icon_scale -- / 2
+Ib_global.default_badge_shift_picture       = {0.5, 0.5}
 
 Ib_global.badge_image_size                  = 64
-Ib_global.icon_to_pictures_ratio            = 0.25
+Ib_global.icon_to_pictures_ratio            = .5
 
 -- 3-char badges
 Ib_global.three_char_icon_shift             = {-1, 0, 1}

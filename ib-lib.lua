@@ -52,7 +52,7 @@ function Get_product_prototype_type(item)
 
   -- Check if it's an item, and overwrite any result from fluid or recipe
   for item_type, _ in pairs(Ib_global.item_types) do
-      if data.raw[item_type][item] then
+      if data.raw[item_type] and data.raw[item_type][item] then
         current_item_type = item_type
       end
   end
@@ -105,7 +105,8 @@ function Build_single_letter_badge_icon(letter, case, invert, justify, corner, t
     icon = Ib_global.filepath .. Ib_global.mipmaps .. "/" .. Ib_global.mipmaps .. "-" .. justify .. "-" .. case .. letter .. invert .. ".png", 
     icon_size = Ib_global.badge_image_size,
     icon_mipmaps = Ib_global.mipmapNums,
-    shift = shift
+    shift = shift,
+    floating = true
   }
 end
 
@@ -166,7 +167,8 @@ function Build_single_img_badge_icon(path, size, scale, mips, corner, spacing)
     icon = path, 
     icon_size = size,
     icon_mipmaps = mips or Ib_global.mipmapNums,
-    shift = shift
+    shift = shift,
+    floating = true
   }
 end
 
@@ -361,33 +363,30 @@ function Build_badge(item, ib_data)
     -- Make `icon` data from the products of a recipe that has no innate `icon` or `icons` data
     if item.type == "recipe" then
       if ((not item.icon) and (not item.icons)) then
-        -- Normal vs. Expensive modes: if, for some insane reason, noraml and expensive mode have different result(s)/main_products, the data from item.expensive will be used
-        local recipe_data
-        if not (item.expensive or item.normal) then recipe_data = item end
-        if item.normal then recipe_data = item.normal end
-        if item.expensive then recipe_data = item.expensive  end
-
         local product
         local product_group
         -- Either there's one product, or there's 'main product'
-        if recipe_data.result then 
-          product_group = Get_product_prototype_type(recipe_data.result)
-          product = data.raw[product_group][recipe_data.result]
+        if item.results and #item.results == 1 then
+          product_group = Get_product_prototype_type(item.results[1].name)
+          product = data.raw[product_group][item.results[1].name]
         end
-        if recipe_data.results and #recipe_data.results == 1 then 
-          product_group = Get_product_prototype_type(recipe_data.results[1].name)
-          product = data.raw[product_group][recipe_data.results[1].name]
+        if item.main_product then
+          product_group = Get_product_prototype_type(item.main_product)
+          product = data.raw[product_group][item.main_product]
         end
-        if recipe_data.main_product then 
-          product_group = Get_product_prototype_type(recipe_data.main_product)
-          product = data.raw[product_group][recipe_data.main_product]
+        if (item.results and #item.results > 1 and (not item.main_product)) or
+           (item.main_product and item.main_product == "") or
+           (not item.results or (item.results == {}))
+            then
+          -- Do nothing because icon is no longer optional
         end
-
         -- Fill in anything
-        if not item.icon then item.icon = product.icon end
-        if not item.icons then item.icons = product.icons end
-        if not item.icon_size then item.icon_size = product.icon_size end
-        if not item.icon_mipmaps then item.icon_mipmaps = product.icon_mipmaps end
+        if product then
+          if not item.icon then item.icon = product.icon end
+          if not item.icons then item.icons = product.icons end
+          if not item.icon_size then item.icon_size = product.icon_size or 64 end
+          if not item.icon_mipmaps then item.icon_mipmaps = product.icon_mipmaps end
+        end
       end
     end
 
@@ -396,7 +395,7 @@ function Build_badge(item, ib_data)
       item.icons = {
         {
           icon = item.icon,
-          icon_size = item.icon_size,
+          icon_size = item.icon_size or 64,
           icon_mipmaps = item.icon_mipmaps
         }
       }
@@ -501,7 +500,7 @@ function Build_badge(item, ib_data)
             item.pictures = table.deepcopy(item.pictures.sheet)
           end
 
-          -- if item.pictures is not an array, it must be a spritesheet directly OR it must have a layers entry.
+          -- if item.pictures is not an table, it must be a spritesheet directly OR it must have a layers entry.
           local oldSpritesheet
           if not item.pictures[1] then
             
@@ -594,7 +593,7 @@ function Build_badge(item, ib_data)
           -- Shove data from 'iconss' into the layer property WITHOUT the badge data.
           for _, icon in pairs(item.icons) do
             if not icon.is_badge_layer then
-              local icon_size = icon.icon_size -- or icon.size
+              local icon_size = icon.icon_size
               local icon_scale = Ib_global.icon_to_pictures_ratio
               local icon_mipmaps = icon.icon_mipmaps
               local icon_tint = icon.tint
@@ -639,7 +638,6 @@ function Build_badge(item, ib_data)
                 Build_img_badge_pictures(layer, ib_data.ib_img_paths, ib_data.ib_img_size, img_scale, img_mips, 1, img_corner, ib_data.ib_img_space)
               end
             end
-
           end
         end
       end
