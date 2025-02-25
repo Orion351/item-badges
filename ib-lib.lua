@@ -3,12 +3,35 @@
 --- @param t1 table
 --- @param t2 table
 function table.merge(t1, t2)
+  t1_bad, t2_bad = false, false
+  if not(t1 or type(t1) == "table") then t1_bad = true end
+  if not(t2 or type(t2) == "table") then t2_bad = true end
+  if t1_bad and t2_bad then return nil end
+  if t1_bad then return t2 end
+  if t2_bad then return t1 end
+
   local new_table = {}
   for k, v in pairs(t1) do
     new_table[k] = v
   end
   for k, v in pairs(t2) do
     new_table[k] = v
+  end
+  return new_table
+end
+
+--- @param t1 table
+--- @param t2 table
+function table.merge_subtables(t1, t2)
+  -- if type(t2) == "table" and not next(t2) then return t1 end
+  local new_table = {}
+  for k, _ in pairs(t1) do
+    new_table[k] = table.merge(t1[k], t2[k])
+  end
+  for k, _ in pairs(t2) do
+    if not new_table[k] then
+      new_table[k] = table.merge(t1[k], t2[k])
+    end
   end
   return new_table
 end
