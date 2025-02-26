@@ -3,6 +3,9 @@ Version: 1.2.1
 Date: 2-25-2025
   Changes:
     - Updating to 2.0 / SA
+    - Changed 'Ib_global.badge_vanilla' to 'Ib_global.perform_default_badging'
+    - Some unbadged vanilla icons are badged in SA
+    - K2 compat not guaranteed to work right now
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.09
 Date: 4-22-2024

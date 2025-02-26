@@ -2,7 +2,8 @@
 -- **************
 
 -- This is an example of how to structure badge data. badge_list is a table of groups in data.raw (fluid, recipe, item, and 
---   child-of-item prototypes) and each table pairs a prototype name with ib_data properties.
+--   child-of-item prototypes, along with signals and misc. prototypes that can be used as signals that have icon(s) data.
+--   Each table pairs a prototype name with ib_data properties.
 
 local badge_list = {}
 
@@ -90,6 +91,7 @@ badge_list["item"] = {
 }
 
 -- Child-of-Item prototype
+-- Tools (really, science packs)
 badge_list["tool"] = {
   -- Science Packs
   ["automation-science-pack"]         = {ib_let_badge = "A",  },
@@ -101,6 +103,7 @@ badge_list["tool"] = {
   ["space-science-pack"]              = {ib_let_badge = "S",  },
 }
 
+-- Modules
 badge_list["module"] = {
   -- Effectivity
   ["efficiency-module"]              = {ib_let_badge = "E",  },
@@ -118,6 +121,7 @@ badge_list["module"] = {
   ["speed-module-3"]                  = {ib_let_badge = "S",  },
 }
 
+-- Ammo
 badge_list["ammo"] = {
   -- Magazines
   ["firearm-magazine"]                = {ib_let_badge = "NR", },
@@ -144,6 +148,7 @@ badge_list["ammo"] = {
   ["antimatter-rocket"]               = {ib_let_badge = "AR", },
 }
 
+-- Capsule (throwables)
 badge_list["capsule"] = {
   -- Grenades
   ["grenade"]                         = {ib_let_badge = "G",  },
@@ -157,6 +162,7 @@ badge_list["capsule"] = {
   ["cliff-explosives"]                = {ib_let_badge = "CE", },
 }
 
+-- Planners
 badge_list["blueprint"] = {
   ["blueprint"]                       = {ib_let_badge = "B", },
 }
@@ -223,6 +229,8 @@ badge_list["virtual-signal"] = {
   ["signal-cyan"]                     = {ib_let_badge = "C",   },
 }
 
+-- "Signals" (these attach to icon data for prototypes that have them for use in signals)
+-- Enemy Signals
 badge_list["unit"] = {
   -- Biters
   ["small-biter"]                     = {ib_let_badge = "1", },
@@ -237,6 +245,7 @@ badge_list["unit"] = {
   ["behemoth-spitter"]                = {ib_let_badge = "4", },
 }
 
+-- Worm Signals
 badge_list["turret"] = {
   -- Worms
   ["small-worm-turret"]                   = {ib_let_badge = "1", },
@@ -247,7 +256,7 @@ badge_list["turret"] = {
 
 return badge_list
 
--- Planets / space locations / asteroids? / etc.
+
 
 -- debug stuff
 -- ***********

@@ -2,8 +2,8 @@
 -- *********
 Ib_global = {}
 
--- Badge Vanilla?
-Ib_global.perform_default_badging                     = true
+-- Badge Vanilla / Quality / Space age?
+Ib_global.perform_default_badging           = true
 
 -- Debug and Logging
 Ib_global.debug                             = false
@@ -30,7 +30,7 @@ Ib_global.char_width_picture_scale          = Ib_global.char_width_icon_scale / 
 Ib_global.filepath                          = "__icon-badges__/graphics/badges/"
 Ib_global.char_whitelist                    = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 
--- Character width nonsense 
+-- Character width kerning data
 Ib_global.char_widths = {
   -- 14
   ["il I"] = 14,
@@ -119,9 +119,14 @@ Ib_global.char_widths = {
 }
 
 -- Settings variables
+-- ******************
+
+-- GM Specific
 if mods["galdocs-manufacturing"] then
   Ib_global.activation                        = settings.startup["ib-activation"].value
 end
+
+-- General
 Ib_global.ib_show_badges                    = settings.startup["ib-show-badges"].value
 Ib_global.ib_show_badges_scale              = settings.startup["ib-show-badges-scale"].value
 Ib_global.ib_badge_opacity                  = settings.startup["ib-badge-opacity"].value
@@ -154,5 +159,4 @@ if Ib_global.ib_zoom_visibility == "Near" then
 end
 
 -- Item types (lists entries in data.raw to check for badge properties)
-
 Ib_global.item_types = defines.prototypes.item

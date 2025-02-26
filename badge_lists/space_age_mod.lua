@@ -51,6 +51,12 @@ badge_list["item"] = {
   ["tree-seed"]                       = {ib_let_badge = "T"  },
   ["yumako-seed"]                     = {ib_let_badge = "Y"  },
   ["jellynut-seed"]                   = {ib_let_badge = "J"  },
+
+  -- Asteroid Chunks
+  ["carbonic-asteroid-chunk"]         = {ib_let_badge = "C"  },
+  ["metallic-asteroid-chunk"]         = {ib_let_badge = "M"  },
+  ["oxide-asteroid-chunk"]            = {ib_let_badge = "O"  },
+  ["promethium-asteroid-chunk"]       = {ib_let_badge = "P"  },
 }
 
 -- Child-of-Item prototype
@@ -69,6 +75,7 @@ badge_list["ammo"] = {
   ["railgun-ammo"]                    = {ib_let_badge = "RG", },
 }
 
+-- Capsule
 badge_list["capsule"] = {
   ["jelly"]                           = {ib_let_badge = "J",  },
 }
@@ -119,7 +126,8 @@ badge_list["recipe"] = {
   ["solid-fuel-from-ammonia"]         = {ib_let_badge = "A",  ib_let_corner = "left-bottom"},
 }
 
--- Signals
+-- "Signals" (these attach to icon data for prototypes that have them for use in signals)
+-- Enemy Signals
 badge_list["unit"] = {
   -- wriggler
   ["small-wriggler-pentapod"]         = {ib_let_badge = "1", },
@@ -130,7 +138,10 @@ badge_list["unit"] = {
   ["small-wriggler-pentapod-premature"]  = {ib_let_badge = "1p", },
   ["medium-wriggler-pentapod-premature"] = {ib_let_badge = "2p", },
   ["big-wriggler-pentapod-premature"]    = {ib_let_badge = "3p", },
+}
 
+-- Spider Enemy Signals
+badge_list["spider-unit"] = {
   -- Strafer
   ["small-strafer-pentapod"]          = {ib_let_badge = "1", },
   ["medium-strafer-pentapod"]         = {ib_let_badge = "2", },
@@ -140,11 +151,50 @@ badge_list["unit"] = {
   ["small-stomper-pentapod"]          = {ib_let_badge = "1", },
   ["medium-stomper-pentapod"]         = {ib_let_badge = "2", },
   ["big-stomper-pentapod"]            = {ib_let_badge = "3", },
+}
 
+-- Demolisher Signals
+badge_list["segmented-unit"] = {
   -- Demolisher
   ["small-demolisher"]                = {ib_let_badge = "1", },
   ["medium-demolisher"]               = {ib_let_badge = "2", },
   ["big-demolisher"]                  = {ib_let_badge = "3", },
+}
+
+-- Planets Signals
+badge_list["planet"] = {
+  ["nauvis"]                          = {ib_let_badge = "N", },
+  ["vulcanus"]                        = {ib_let_badge = "V", },
+  ["fulgora"]                         = {ib_let_badge = "F", },
+  ["gleba"]                           = {ib_let_badge = "G", },
+  ["aquilo"]                          = {ib_let_badge = "A", },
+}
+
+-- Asteroid Signals
+badge_list["asteroid"] = {
+  -- Carbonic
+  ["small-carbonic-asteroid"]         = {ib_let_badge = "C", },
+  ["medium-carbonic-asteroid"]        = {ib_let_badge = "C", },
+  ["big-carbonic-asteroid"]           = {ib_let_badge = "C", },
+  ["huge-carbonic-asteroid"]          = {ib_let_badge = "C", },
+
+  -- Oxide
+  ["small-oxide-asteroid"]            = {ib_let_badge = "O", },
+  ["medium-oxide-asteroid"]           = {ib_let_badge = "O", },
+  ["big-oxide-asteroid"]              = {ib_let_badge = "O", },
+  ["huge-oxide-asteroid"]             = {ib_let_badge = "O", },
+
+  -- Metallic
+  ["small-metallic-asteroid"]         = {ib_let_badge = "M", },
+  ["medium-metallic-asteroid"]        = {ib_let_badge = "M", },
+  ["big-metallic-asteroid"]           = {ib_let_badge = "M", },
+  ["huge-metallic-asteroid"]          = {ib_let_badge = "M", },
+
+  -- Promethium
+  ["small-promethium-asteroid"]       = {ib_let_badge = "P", },
+  ["medium-promethium-asteroid"]      = {ib_let_badge = "P", },
+  ["big-promethium-asteroid"]         = {ib_let_badge = "P", },
+  ["huge-promethium-asteroid"]        = {ib_let_badge = "P", },
 }
 
 return badge_list

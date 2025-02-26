@@ -8,6 +8,8 @@
 		"ignore":[ "dev/**", "*.py", "*.md" ]
   },
 	"dependencies": [
-		"base >= 2.0"
+		"base >= 2.0",
+		"? quality >= 2.0.35",
+		"? space-age >= 2.0.35"
 	]
 }

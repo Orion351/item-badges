@@ -1,5 +1,5 @@
--- Table Function
--- **************
+-- Table Functions
+-- ***************
 --- @param t1 table
 --- @param t2 table
 function table.merge(t1, t2)
@@ -347,12 +347,11 @@ end
 -- ******************************************************************************************
 function Build_badge(item, ib_data)
   -- Cases:
-  --   * Items can have some, or all of: 'icon', 'icons' or 'pictures'. Recipes can have 'icon', 'icons' or none of those
-  --       * Pull icon data from products if we're badging a recipe with no `icon` or `icons` data. It will be one of three things:
-  --           * 'result'
+  --   * Items can have some, or all of: 'icon', 'icons' or 'pictures'. Recipes can have 'icon', 'icons' or none of those. 'icon(s)'d entities with signal' can have icon or icons.
+  --       * Pull icon data from products if we're badging a recipe with no `icon` or `icons` data. It will be one of two things:
   --           * 'results' with 1 entry
   --           * a 'main_product'
-  --         from properties directly on the recipe, in normal, or in expensive; further, the product can come from fluid, item, or child-of-item prototypes in data.raw
+  --         from properties directly on the recipe. Further, the product can come from fluid, item, child-of-item prototypes in data.raw
   --       * If there's no 'icons', there's a 'icon' data; make an 'icons' entry from the 'icon' data. Make sure to pull partial information -- like icon_size
   --       * Only make 'pictures' out of 'icons' data if needed for belts
   --   * Pictures can be one of four structures: 
@@ -365,7 +364,7 @@ function Build_badge(item, ib_data)
 
   -- Future upgrades:
   --   For cases with multiple image badges, expose a setting to modders that makes the badges display left-to-right OR top-to-bottom
-  --   When feeling particularly desperate for something to do, make 4 letter badges, or have 3-letter badges actually be left/right justified instead of just centered
+  --   When feeling particularly desperate for something to do, make 4 letter badges, or have 3-letter badges actually be left/right justified instead of just centered, or arbitrary letter badges. Yay
 
   -- Check to see if 'ib_let_badge' is well-formed
   local is_good_letters = false
@@ -412,13 +411,8 @@ function Build_badge(item, ib_data)
           product_group = Get_product_prototype_type(item.main_product)
           product = data.raw[product_group][item.main_product]
         end
-        if (item.results and #item.results > 1 and (not item.main_product)) or
-           (item.main_product and item.main_product == "") or
-           (not item.results or (item.results == {}))
-            then
-          -- Do nothing because icon is no longer optional
-        end
-        -- Fill in anything
+
+        -- Fill in properties for the icon from 'product'
         if product then
           if not item.icon then item.icon = product.icon end
           if not item.icons then item.icons = product.icons end
@@ -453,7 +447,7 @@ function Build_badge(item, ib_data)
     -- end
 
 
-
+    
     -- ib_let_badge data
     -- *****************
 
@@ -638,11 +632,6 @@ function Build_badge(item, ib_data)
 
               local newLayer = {}
 
-              -- Just pull over all the properties; chose not to do this because it puts unused 'icon' properties in 'pictures'
-              -- for k, v in pairs(icon) do
-              --   newLayer[k] = v
-              -- end
-
               newLayer.filename = icon.icon
               newLayer.size = icon_size
               newLayer.scale = icon_scale
@@ -695,8 +684,8 @@ end
 --   badge_list[prototype_group_2] = {["prototype_name_1"] = ib_data_2_1, ["prototype_name_2"] = ib_data_2_2, ...}
 --   ...
 --   where:
---     prototype_group is either fluid, recipe, item, or child-of-item in data.raw
---     prototype_name is the name of a fluid, recipe, item, or child-of-item in the prototype_group
+--     prototype_group is either fluid, recipe, item, child-of-item, or a prototype with an icon(s) property that has an associated signal in data.raw
+--     prototype_name is the name of one of the elements in the prototype_group
 --     ib_data_whatever_whatever is a table with icon badge properties as outline in the readme
 
 -- Merge Badge List
@@ -771,10 +760,9 @@ end
 
 -- DO NOT USE
 -- **********
--- FIXME : This function doesn't work but this is where it is right now in development.
+-- FIXME: This function doesn't work (?)
 -- Unbadge Function
 function Unbadge(item)
-  log("Icon Badges: asdf")
   if not item.icons then log(Ib_global.log_prefix .. "Prototype has no 'icons' property, and thus hasn't been badged.") end
   local new_icons = {}
   for _, icon in pairs(items.icons) do
