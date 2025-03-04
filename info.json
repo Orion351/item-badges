@@ -9,7 +9,7 @@
   },
 	"dependencies": [
 		"base >= 2.0",
-		"? quality >= 2.0.32",
-		"? space-age >= 2.0.32"
+		"? quality",
+		"? space-age"
 	]
 }
