@@ -1,14 +1,3 @@
-if mods["galdocs-manufacturing"] then
-  data:extend({
-    { -- Activation
-    type = "bool-setting",
-    name = "ib-activation",
-    setting_type = "startup",
-    default_value = true,
-    },
-  })
-end
-
 data:extend({
   { -- Badges setting
     type = "string-setting",
