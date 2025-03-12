@@ -25,7 +25,7 @@ Ib_global.Badge_list = badge_list
 
 -- Iterate over all vanilla/quality/space age items from above and build badges for each
 if Ib_global.perform_default_badging then
-  if not mods["galdocs-manufacturing"] or (mods["galdocs-manufacturing"] and Ib_global.activation) then
+  if not Ib_global.downstream_mod_active or (Ib_global.downstream_mod_active and Ib_global.activation) then
     Process_badge_list(Ib_global.Badge_list)
   end
 end

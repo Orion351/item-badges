@@ -121,10 +121,12 @@ Ib_global.char_widths = {
 -- Settings variables
 -- ******************
 
--- GM Specific
-if mods["galdocs-manufacturing"] then
-  Ib_global.activation                        = settings.startup["ib-activation"].value
+-- Downstream Mods
+Ib_global.downstream_mod_active = require("downstream_mods")
+if Ib_global.downstream_mod_active then
+  Ib_global.activation                      = settings.startup["ib-activation"].value
 end
+
 
 -- General
 Ib_global.ib_show_badges                    = settings.startup["ib-show-badges"].value
