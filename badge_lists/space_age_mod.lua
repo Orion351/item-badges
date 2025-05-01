@@ -88,8 +88,8 @@ badge_list["fluid"] = {
   ["holmium-solution"]                = {ib_let_badge = "H",  },
   ["electrolyte"]                     = {ib_let_badge = "E",  },
   ["ammoniacal-solution"]             = {ib_let_badge = "AS", },
-  ["fluoroketone-hot"]                = {ib_let_badge = "FC", },
-  ["fluoroketone-cold"]               = {ib_let_badge = "FH", },
+  ["fluoroketone-hot"]                = {ib_let_badge = "FH", },
+  ["fluoroketone-cold"]               = {ib_let_badge = "FC", },
   ["lithium-brine"]                   = {ib_let_badge = "Lb", },
 
   -- Steams
