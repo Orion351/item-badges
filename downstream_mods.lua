@@ -5,6 +5,7 @@ local downstream_mod_active = false
 local downstream_mods = {
   "galdocs-manufacturing",
   "hidden-worlds",
+  "krastorio2"
 }
 
 -- Are there downstream mods?

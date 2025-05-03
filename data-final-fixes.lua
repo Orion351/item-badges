@@ -8,6 +8,7 @@ local badge_list = {}
 local vanilla_list = require("badge_lists/vanilla")
 badge_list = vanilla_list
 
+-- 
 -- Quality
 if mods["quality"] then  
   local quality_mod_list = require("badge_lists/quality_mod")
