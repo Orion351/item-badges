@@ -13,7 +13,7 @@ badge_list["item"] = {
   ["kr-sand"]                                        = {ib_let_badge = "S",   },                              -- "sand"
 
   -- Ores
-  ["kr-rare-metal-ore"]                             = {ib_let_badge = "Rm",  },                              -- "raw-rare-metals"
+  ["kr-rare-metal-ore"]                              = {ib_let_badge = "Rm",  },                              -- "raw-rare-metals"
   ["kr-coke"]                                        = {ib_let_badge = "Co",  },
 
   -- Enriched ores
@@ -130,6 +130,9 @@ badge_list["item"] = {
   ["kr-quartz"]                                      = {ib_let_badge = "Q",   },
   ["kr-imersite-crystal"]                            = {ib_let_badge = "Im",  },                              -- "imersite-crystal"
 
+  -- Misc
+  ["kr-imersite"]                                    = {ib_let_badge = "Im",  },
+
   -- Inside Joke
   ["kr-logo"]                                        = {ib_let_badge = "O",   },
 }
@@ -180,8 +183,8 @@ badge_list["ammo"] = {
   ["kr-antimatter-artillery-shell"]                  = {ib_let_badge = "AM",  },
 
   -- Rockets
-  ["kr-heavy-rocket"]                                = {ib_let_badge = "HR",  },
-  ["kr-antimatter-rocket"]                           = {ib_let_badge = "AR",  },
+  ["kr-heavy-rocket"]                                = {ib_let_badge = "H",   },
+  ["kr-antimatter-rocket"]                           = {ib_let_badge = "AM",  },
 
   -- Railgun Shell
   ["kr-basic-railgun-shell"]                         = {ib_let_badge = "B",   },
@@ -192,6 +195,9 @@ badge_list["ammo"] = {
   ["kr-explosive-turret-rocket"]                     = {ib_let_badge = "Ex",  },
   ["kr-nuclear-turret-rocket"]                       = {ib_let_badge = "Nu",  },
   ["kr-antimatter-turret-rocket"]                    = {ib_let_badge = "AM",  },
+
+  -- Legacy
+  ["kr-imersite-rounds-magazine"]                    = {ib_let_badge = "Im",  },
 }
 
 badge_list["capsule"] = {
@@ -237,6 +243,26 @@ badge_list["recipe"] = {
   -- ["kr-restore-used-pollution-filter"]              = {ib_let_badge = "F",   },                               -- "restore-used-pollution-filter"
   -- ["restore-used-improved-pollution-filter"]        = {ib_let_badge = "IF",  },
 
+  -- Burning Fluids
+  ["kr-burn-crude-oil"]                              = {ib_let_badge = "C",   },
+  ["kr-burn-water"]                                  = {ib_let_badge = "W",   },
+  ["kr-burn-light-oil"]                              = {ib_let_badge = "L",   },
+  ["kr-burn-heavy-oil"]                              = {ib_let_badge = "H",   },
+  ["kr-burn-lubricant"]                              = {ib_let_badge = "Lu"   },
+  ["kr-burn-petroleum-gas"]                          = {ib_let_badge = "P",   },
+  ["kr-burn-sulfuric-acid"]                          = {ib_let_badge = "SA",  },
+  ["kr-burn-kr-mineral-water"]                       = {ib_let_badge = "MW",  },
+  ["kr-burn-kr-dirty-water"]                         = {ib_let_badge = "DW",  },
+  ["kr-burn-kr-hydrogen"]                            = {ib_let_badge = "H",   },
+  ["kr-burn-kr-oxygen"]                              = {ib_let_badge = "O",   },
+  ["kr-burn-kr-chlorine"]                            = {ib_let_badge = "Cl",  },
+  ["kr-burn-kr-nitrogen"]                            = {ib_let_badge = "N",   },
+  ["kr-burn-kr-hydrogen-chloride"]                   = {ib_let_badge = "NCl", },
+  ["kr-burn-kr-heavy-water"]                         = {ib_let_badge = "HW",  },
+  ["kr-burn-kr-ammonia"]                             = {ib_let_badge = "Am",  },
+  ["kr-burn-kr-nitric-acid"]                         = {ib_let_badge = "NA",  },
+  ["kr-burn-kr-biomethanol"]                         = {ib_let_badge = "BM",  },
+
   -- Fill Barrels
   ["kr-mineral-water-barrel"]                        = {ib_let_badge = "MW",  ib_let_corner = "left-bottom", },
   ["kr-dirty-water-barrel"]                          = {ib_let_badge = "DW",  ib_let_corner = "left-bottom", },
@@ -249,7 +275,7 @@ badge_list["recipe"] = {
   ["kr-ammonia-barrel"]                              = {ib_let_badge = "Am",  ib_let_corner = "left-bottom", },
   ["kr-nitric-acid-barrel"]                          = {ib_let_badge = "NA",  ib_let_corner = "left-bottom", },
   ["kr-biomethanol-barrel"]                          = {ib_let_badge = "BM",  ib_let_corner = "left-bottom", },
-
+  
   -- Empty Barrels
   ["empty-kr-mineral-water-barrel"]                  = {ib_let_badge = "MW",  ib_let_corner = "left-bottom", },
   ["empty-kr-dirty-water-barrel"]                    = {ib_let_badge = "DW",  ib_let_corner = "left-bottom", },

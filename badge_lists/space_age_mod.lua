@@ -6,7 +6,7 @@ local badge_list = {}
 -- Item prototypes
 badge_list["item"] = {
   -- Plates
-  ["steel-plate"]                     = {ib_let_badge = "St", },
+  ["steel-plate"]                     = {ib_let_badge = "ST",  ib_let_invert = true, },
   ["holmium-plate"]                   = {ib_let_badge = "Ho", },
   ["tungsten-plate"]                  = {ib_let_badge = "W",  },
 
@@ -17,8 +17,13 @@ badge_list["item"] = {
   ["sulfur"]                          = {ib_let_badge = "S",  },
   ["scrap"]                           = {ib_let_badge = "Sc", },
 
+  -- Bacteria
+  ["iron-bacteria"]                   = {ib_let_badge = "Fe", },
+  ["copper-bacteria"]                 = {ib_let_badge = "Cu", },
+
   -- Cubes
   ["ice"]                             = {ib_let_badge = "I",  },
+  ["solid-fuel"]                      = {ib_let_badge = "SF", },
 
   -- Belts
   ["turbo-transport-belt"]            = {ib_let_badge = "4",  },
@@ -57,6 +62,9 @@ badge_list["item"] = {
   ["metallic-asteroid-chunk"]         = {ib_let_badge = "M"  },
   ["oxide-asteroid-chunk"]            = {ib_let_badge = "O"  },
   ["promethium-asteroid-chunk"]       = {ib_let_badge = "P"  },
+
+  -- Crystaly
+  ["bioflux"]                         = {ib_let_badge = "Bf" },
 }
 
 -- Child-of-Item prototype
@@ -77,6 +85,7 @@ badge_list["ammo"] = {
 
 -- Capsule
 badge_list["capsule"] = {
+  -- Cubes
   ["jelly"]                           = {ib_let_badge = "J",  },
 }
 
@@ -111,12 +120,12 @@ badge_list["fluid"] = {
 -- Recipe prototype
 badge_list["recipe"] = {
   -- Fill Barrels
-  ["fluoroketone-hot-barrel"]         = {ib_let_badge = "FC", },
-  ["fluoroketone-cold-barrel"]        = {ib_let_badge = "FH", },
+  ["fluoroketone-hot-barrel"]         = {ib_let_badge = "FC", ib_let_corner = "left-bottom"},
+  ["fluoroketone-cold-barrel"]        = {ib_let_badge = "FH", ib_let_corner = "left-bottom"},
 
   -- Empty Barrels
-  ["empty-fluoroketone-hot-barrel"]   = {ib_let_badge = "FC", },
-  ["empty-fluoroketone-cold-barrel"]  = {ib_let_badge = "FH", },
+  ["empty-fluoroketone-hot-barrel"]   = {ib_let_badge = "FC", ib_let_corner = "left-bottom"},
+  ["empty-fluoroketone-cold-barrel"]  = {ib_let_badge = "FH", ib_let_corner = "left-bottom"},
 
   -- Advacned Space Fuels
   ["advanced-thruster-fuel"]          = {ib_let_badge = "TF", ib_let_corner = "left-bottom"},
@@ -124,6 +133,53 @@ badge_list["recipe"] = {
 
   -- Advacned Space Fuels
   ["solid-fuel-from-ammonia"]         = {ib_let_badge = "A",  ib_let_corner = "left-bottom"},
+
+  -- Molten
+  ["molten-iron-from-lava"]           = {ib_let_badge = "Fe",  },
+  ["molten-copper-from-lava"]         = {ib_let_badge = "Cu",  },
+
+  ["molten-iron"]                     = {ib_let_badge = "Fe", ib_let_corner = "left-bottom"},
+  ["molten-copper"]                   = {ib_let_badge = "Cu", ib_let_corner = "left-bottom"},
+
+  -- Casting
+  ["casting-iron"]                    = {ib_let_badge = "Fe",  },
+  ["casting-copper"]                  = {ib_let_badge = "Cu",  },
+  
+  ["casting-copper-cable"]            = {ib_let_badge = "Cu",  },
+  ["casting-steel"]                   = {ib_let_badge = "ST",  ib_let_invert = true, },
+  ["casting-iron-gear-wheel"]         = {ib_let_badge = "Fe",  },
+  ["casting-iron-stick"]              = {ib_let_badge = "Fe",  },
+
+  -- Bacteria
+  ["iron-bacteria"]                   = {ib_let_badge = "Fe", },
+  ["copper-bacteria"]                 = {ib_let_badge = "Cu", },
+
+  ["iron-bacteria-cultivation"]       = {ib_let_badge = "Fe", },
+  ["copper-bacteria-cultivation"]     = {ib_let_badge = "Cu", },
+
+  -- Clump-over-droplet Stacked Droplets
+  ["coal-liquefaction"]               = {ib_let_badge = "CL", },
+  ["steam-condensation"]              = {ib_let_badge = "SC", },
+
+  -- Cube-over-drop Stacked Recipes
+  ["ice-melting"]                     = {ib_let_badge = "IM", },
+  ["biolubricant"]                    = {ib_let_badge = "BL", },
+
+  -- Rocket Fuel
+  ["ammonia-rocket-fuel"]             = {ib_let_badge = "RF", ib_let_corner = "left-bottom"},
+
+  -- Asteroid Crushing
+  ["carbonic-asteroid-crushing"]      = {ib_let_badge = "C"  },
+  ["metallic-asteroid-crushing"]      = {ib_let_badge = "M"  },
+  ["oxide-asteroid-crushing"]         = {ib_let_badge = "O"  },
+
+  -- Asteroid Reprocessing
+  ["carbonic-asteroid-reprocessing"]  = {ib_let_badge = "C"  },
+  ["metallic-asteroid-reprocessing"]  = {ib_let_badge = "M"  },
+  ["oxide-asteroid-reprocessing"]     = {ib_let_badge = "O"  },
+
+  -- Crystaly
+  ["bioflux"]                         = {ib_let_badge = "Bf" },
 }
 
 -- "Signals" (these attach to icon data for prototypes that have them for use in signals)

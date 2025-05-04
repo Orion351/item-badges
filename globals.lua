@@ -162,3 +162,16 @@ end
 
 -- Item types (lists entries in data.raw to check for badge properties)
 Ib_global.item_types = defines.prototypes.item
+
+-- Color String
+--   If a badge has the ib_colors_string property, it will check whether or not each color is 'turned on' in the option menus, and if any of them are, it will draw it. Otherwise, it won't.
+--   P = Purple
+--   B = Blue
+--   G = Green
+--   Y = Yellow
+--   O = Orange
+--   R = Red
+--   w = White
+--   g = Grey
+--   b = Black
+Ib_global.colors_string = "PBGYORwgb"

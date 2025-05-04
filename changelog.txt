@@ -4,6 +4,8 @@ Date: 5-4-2025
   Changes:
     - Corrected fluorketone hot and cold badges, which were swapped
     - Added K2 Compatibility
+    - Made subtle tweaks to a handful of vanilla badges
+    - Added many SA badges for recipes and Factoriopedia entries
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.4
 Date: 3-12-2025

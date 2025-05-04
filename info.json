@@ -11,6 +11,6 @@
 		"base >= 2.0",
 		"? quality",
 		"? space-age",
-		"Krastorio2"
+		"? Krastorio2"
 	]
 }

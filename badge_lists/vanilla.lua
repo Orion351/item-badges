@@ -134,18 +134,14 @@ badge_list["ammo"] = {
 
   -- Rockets
   ["rocket"]                          = {ib_let_badge = "R",  },
-  ["explosive-rocket"]                = {ib_let_badge = "ER", },
+  ["explosive-rocket"]                = {ib_let_badge = "Ex", },
   ["atomic-bomb"]                     = {ib_let_badge = "AB", },
 
   -- Cannon Shells
   ["cannon-shell"]                    = {ib_let_badge = "C",  },
-  ["explosive-cannon-shell"]          = {ib_let_badge = "E",  },
+  ["explosive-cannon-shell"]          = {ib_let_badge = "Ex", },
   ["uranium-cannon-shell"]            = {ib_let_badge = "U",  },
   ["explosive-uranium-cannon-shell"]  = {ib_let_badge = "UE", },
-
-  -- Rockets
-  ["heavy-rocket"]                    = {ib_let_badge = "HR", },
-  ["antimatter-rocket"]               = {ib_let_badge = "AR", },
 }
 
 -- Capsule (throwables)
@@ -213,6 +209,7 @@ badge_list["recipe"] = {
 
   -- Misc
   ["nuclear-fuel"]                    = {ib_let_badge = "NF", },
+  ["space-science-pack"]              = {ib_let_badge = "S", },
 }
 
 -- Signals
