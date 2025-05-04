@@ -8,7 +8,12 @@ local badge_list = {}
 local vanilla_list = require("badge_lists/vanilla")
 badge_list = vanilla_list
 
--- 
+-- Krastorio 2
+if mods["Krastorio2"] then  
+  local krastorio2_mod_list = require("badge_lists/krastorio2")
+  badge_list = table.merge_subtables(badge_list, krastorio2_mod_list)
+end
+
 -- Quality
 if mods["quality"] then  
   local quality_mod_list = require("badge_lists/quality_mod")
