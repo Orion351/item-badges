@@ -9,80 +9,84 @@ local badge_list = {}
 
 -- Item prototypes
 badge_list["item"] = {
-  -- Plates
-  ["iron-plate"]                      = {ib_let_badge = "Fe", },
-  ["copper-plate"]                    = {ib_let_badge = "Cu", },
+  -- ib_cluster: plates
+  ["iron-plate"]                      = {ib_let_badge = "Fe", ib_cluster = "plates", },
+  ["copper-plate"]                    = {ib_let_badge = "Cu", ib_cluster = "plates", },
 
-  -- Uraniums
-  ["uranium-235"]                     = {ib_let_badge = "235", },
-  ["uranium-238"]                     = {ib_let_badge = "238", },
+  -- ib_cluster: uraniums
+  ["uranium-235"]                     = {ib_let_badge = "235", ib_cluster = "uraniums", },
+  ["uranium-238"]                     = {ib_let_badge = "238", ib_cluster = "uraniums", },
 
-  -- Ores
-  ["iron-ore"]                        = {ib_let_badge = "Fe", },
-  ["copper-ore"]                      = {ib_let_badge = "Cu", },
-  ["uranium-ore"]                     = {ib_let_badge = "U",  },
-  ["coal"]                            = {ib_let_badge = "C",  },
-  ["stone"]                           = {ib_let_badge = "S",  },
+  -- ib_cluster: ores
+  ["iron-ore"]                        = {ib_let_badge = "Fe", ib_cluster = "ores", },
+  ["copper-ore"]                      = {ib_let_badge = "Cu", ib_cluster = "ores", },
+  ["uranium-ore"]                     = {ib_let_badge = "U",  ib_cluster = "ores", },
+  ["coal"]                            = {ib_let_badge = "C",  ib_cluster = "ores", },
+  ["stone"]                           = {ib_let_badge = "S",  ib_cluster = "ores", },
 
-  -- Boiler and Heat Exchanger
-  ["boiler"]                          = {ib_let_badge = "B",  },
-  ["heat-exchanger"]                  = {ib_let_badge = "HE", },
+  -- ib_cluster: heaters
+  ["boiler"]                          = {ib_let_badge = "B",  ib_cluster = "heaters", },
+  ["heat-exchanger"]                  = {ib_let_badge = "HE", ib_cluster = "heaters", },
 
-  -- Belts
-  ["transport-belt"]                  = {ib_let_badge = "1",  },
-  ["fast-transport-belt"]             = {ib_let_badge = "2",  },
-  ["express-transport-belt"]          = {ib_let_badge = "3",  },
-  ["underground-belt"]                = {ib_let_badge = "1",  },
-  ["fast-underground-belt"]           = {ib_let_badge = "2",  },
-  ["express-underground-belt"]        = {ib_let_badge = "3",  },
-  ["splitter"]                        = {ib_let_badge = "1",  },
-  ["fast-splitter"]                   = {ib_let_badge = "2",  },
-  ["express-splitter"]                = {ib_let_badge = "3",  },
-  ["loader"]                          = {ib_let_badge = "1",  },
-  ["fast-loader"]                     = {ib_let_badge = "2",  },
-  ["express-loader"]                  = {ib_let_badge = "3",  },
+  -- ib_cluster: belts
+  ["transport-belt"]                  = {ib_let_badge = "1",  ib_cluster = "belts", },
+  ["fast-transport-belt"]             = {ib_let_badge = "2",  ib_cluster = "belts", },
+  ["express-transport-belt"]          = {ib_let_badge = "3",  ib_cluster = "belts", },
+  ["underground-belt"]                = {ib_let_badge = "1",  ib_cluster = "belts", },
+  
+  -- ib_cluster: underground-belts
+  ["fast-underground-belt"]           = {ib_let_badge = "2",  ib_cluster = "underground-belts"},
+  ["express-underground-belt"]        = {ib_let_badge = "3",  ib_cluster = "underground-belts"},
+  ["splitter"]                        = {ib_let_badge = "1",  ib_cluster = "underground-belts"},
+  ["fast-splitter"]                   = {ib_let_badge = "2",  ib_cluster = "underground-belts"},
+  
+  -- ib_cluster: splitters
+  ["express-splitter"]                = {ib_let_badge = "3",  ib_cluster = "splitters", },
+  ["loader"]                          = {ib_let_badge = "1",  ib_cluster = "splitters", },
+  ["fast-loader"]                     = {ib_let_badge = "2",  ib_cluster = "splitters", },
+  ["express-loader"]                  = {ib_let_badge = "3",  ib_cluster = "splitters", },
 
-  -- Circuits
-  ["electronic-circuit"]              = {ib_let_badge = "G",  },
-  ["advanced-circuit"]                = {ib_let_badge = "R",  },
-  ["processing-unit"]                 = {ib_let_badge = "B",  },
+  -- ib_cluster: circuits
+  ["electronic-circuit"]              = {ib_let_badge = "G",  ib_cluster = "circuits", },
+  ["advanced-circuit"]                = {ib_let_badge = "R",  ib_cluster = "circuits", },
+  ["processing-unit"]                 = {ib_let_badge = "B",  ib_cluster = "circuits", },
 
-  -- Chests
-  ["active-provider-chest"]           = {ib_let_badge = "A",  },
-  ["passive-provider-chest"]          = {ib_let_badge = "P",  },
-  ["storage-chest"]                   = {ib_let_badge = "S",  },
-  ["buffer-chest"]                    = {ib_let_badge = "B",  },
-  ["requester-chest"]                 = {ib_let_badge = "R",  },
+  -- ib_cluster: chests
+  ["active-provider-chest"]           = {ib_let_badge = "A",  ib_cluster = "chests", },
+  ["passive-provider-chest"]          = {ib_let_badge = "P",  ib_cluster = "chests", },
+  ["storage-chest"]                   = {ib_let_badge = "S",  ib_cluster = "chests", },
+  ["buffer-chest"]                    = {ib_let_badge = "B",  ib_cluster = "chests", },
+  ["requester-chest"]                 = {ib_let_badge = "R",  ib_cluster = "chests", },
 
-  -- Barrels
-  ["barrel"]                          = {ib_let_badge = "EB", },
-  ["crude-oil-barrel"]                = {ib_let_badge = "C",  },
-  ["water-barrel"]                    = {ib_let_badge = "W",  },
-  ["light-oil-barrel"]                = {ib_let_badge = "L",  },
-  ["heavy-oil-barrel"]                = {ib_let_badge = "H",  },
-  ["lubricant-barrel"]                = {ib_let_badge = "Lu"  },
-  ["petroleum-gas-barrel"]            = {ib_let_badge = "P",  },
-  ["sulfuric-acid-barrel"]            = {ib_let_badge = "SA", },
+  -- ib_cluster: barrels
+  ["barrel"]                          = {ib_let_badge = "EB", ib_cluster = "barrels", },
+  ["crude-oil-barrel"]                = {ib_let_badge = "C",  ib_cluster = "barrels", },
+  ["water-barrel"]                    = {ib_let_badge = "W",  ib_cluster = "barrels", },
+  ["light-oil-barrel"]                = {ib_let_badge = "L",  ib_cluster = "barrels", },
+  ["heavy-oil-barrel"]                = {ib_let_badge = "H",  ib_cluster = "barrels", },
+  ["lubricant-barrel"]                = {ib_let_badge = "Lu", ib_cluster = "barrels", },
+  ["petroleum-gas-barrel"]            = {ib_let_badge = "P",  ib_cluster = "barrels", },
+  ["sulfuric-acid-barrel"]            = {ib_let_badge = "SA", ib_cluster = "barrels", },
 
-  -- Fuel
-  ["nuclear-fuel"]                    = {ib_let_badge = "NF", },
-  ["rocket-fuel"]                     = {ib_let_badge = "RF", },
+  -- ib_cluster: rocket-fuels
+  ["nuclear-fuel"]                    = {ib_let_badge = "NF", ib_cluster = "rocket-fuels", },
+  ["rocket-fuel"]                     = {ib_let_badge = "RF", ib_cluster = "rocket-fuels", },
 
-  -- Inserter
-  ["burner-inserter"]                 = {ib_let_badge = "B",  },
-  ["inserter"]                        = {ib_let_badge = "I",  },
-  ["fast-inserter"]                   = {ib_let_badge = "F",  },
-  ["long-handed-inserter"]            = {ib_let_badge = "LH", },
-  ["bulk-inserter"]                   = {ib_let_badge = "Bk"  },
+  -- ib_cluster: inserters
+  ["burner-inserter"]                 = {ib_let_badge = "B",  ib_cluster = "inserters", },
+  ["inserter"]                        = {ib_let_badge = "I",  ib_cluster = "inserters", },
+  ["fast-inserter"]                   = {ib_let_badge = "F",  ib_cluster = "inserters", },
+  ["long-handed-inserter"]            = {ib_let_badge = "LH", ib_cluster = "inserters", },
+  ["bulk-inserter"]                   = {ib_let_badge = "Bk", ib_cluster = "inserters", },
 
-  -- Equipment
-  ["energy-shield-equipment"]         = {ib_let_badge = "1",  },
-  ["energy-shield-mk2-equipment"]     = {ib_let_badge = "2",  },
-  ["personal-roboport-equipment"]     = {ib_let_badge = "1",  },
-  ["personal-roboport-mk2-equipment"] = {ib_let_badge = "2",  },
+  -- ib_cluster: equipment
+  ["energy-shield-equipment"]         = {ib_let_badge = "1",  ib_cluster = "equipment", },
+  ["energy-shield-mk2-equipment"]     = {ib_let_badge = "2",  ib_cluster = "equipment", },
+  ["personal-roboport-equipment"]     = {ib_let_badge = "1",  ib_cluster = "equipment", },
+  ["personal-roboport-mk2-equipment"] = {ib_let_badge = "2",  ib_cluster = "equipment", },
 
-  -- Misc
-  ["explosives"]                      = {ib_let_badge = "E",  },
+  -- ib_cluster: dynamites
+  ["explosives"]                      = {ib_let_badge = "E",  ib_cluster = "dynamites", },
   
   -- Test
   -- ["plastic-bar"] = {badge = "Pl"},
@@ -93,162 +97,164 @@ badge_list["item"] = {
 -- Child-of-Item prototype
 -- Tools (really, science packs)
 badge_list["tool"] = {
-  -- Science Packs
-  ["automation-science-pack"]         = {ib_let_badge = "A",  },
-  ["logistic-science-pack"]           = {ib_let_badge = "L",  },
-  ["military-science-pack"]           = {ib_let_badge = "M",  },
-  ["chemical-science-pack"]           = {ib_let_badge = "C",  },
-  ["production-science-pack"]         = {ib_let_badge = "P",  },
-  ["utility-science-pack"]            = {ib_let_badge = "U",  },
-  ["space-science-pack"]              = {ib_let_badge = "S",  },
+  -- ib_cluster: sciences
+  ["automation-science-pack"]         = {ib_let_badge = "A",  ib_cluster = "sciences", },
+  ["logistic-science-pack"]           = {ib_let_badge = "L",  ib_cluster = "sciences", },
+  ["military-science-pack"]           = {ib_let_badge = "M",  ib_cluster = "sciences", },
+  ["chemical-science-pack"]           = {ib_let_badge = "C",  ib_cluster = "sciences", },
+  ["production-science-pack"]         = {ib_let_badge = "P",  ib_cluster = "sciences", },
+  ["utility-science-pack"]            = {ib_let_badge = "U",  ib_cluster = "sciences", },
+  ["space-science-pack"]              = {ib_let_badge = "S",  ib_cluster = "sciences", },
 }
 
 -- Modules
 badge_list["module"] = {
-  -- Effectivity
-  ["efficiency-module"]              = {ib_let_badge = "E",  },
-  ["efficiency-module-2"]            = {ib_let_badge = "E",  },
-  ["efficiency-module-3"]            = {ib_let_badge = "E",  },
-  
-  -- Productivity
-  ["productivity-module"]             = {ib_let_badge = "P",  },
-  ["productivity-module-2"]           = {ib_let_badge = "P",  },
-  ["productivity-module-3"]           = {ib_let_badge = "P",  },
-
-  -- Speed
-  ["speed-module"]                    = {ib_let_badge = "S",  },
-  ["speed-module-2"]                  = {ib_let_badge = "S",  },
-  ["speed-module-3"]                  = {ib_let_badge = "S",  },
+  -- ib_cluster: modules
+  ["efficiency-module"]               = {ib_let_badge = "E",  ib_cluster = "modules", },
+  ["efficiency-module-2"]             = {ib_let_badge = "E",  ib_cluster = "modules", },
+  ["efficiency-module-3"]             = {ib_let_badge = "E",  ib_cluster = "modules", },
+  ["productivity-module"]             = {ib_let_badge = "P",  ib_cluster = "modules", },
+  ["productivity-module-2"]           = {ib_let_badge = "P",  ib_cluster = "modules", },
+  ["productivity-module-3"]           = {ib_let_badge = "P",  ib_cluster = "modules", },
+  ["speed-module"]                    = {ib_let_badge = "S",  ib_cluster = "modules", },
+  ["speed-module-2"]                  = {ib_let_badge = "S",  ib_cluster = "modules", },
+  ["speed-module-3"]                  = {ib_let_badge = "S",  ib_cluster = "modules", },
 }
 
 -- Ammo
 badge_list["ammo"] = {
-  -- Magazines
-  ["firearm-magazine"]                = {ib_let_badge = "NR", },
-  ["piercing-rounds-magazine"]        = {ib_let_badge = "PR", },
-  ["uranium-rounds-magazine"]         = {ib_let_badge = "UR", },
+  -- ib_cluster: magazines
+  ["firearm-magazine"]                = {ib_let_badge = "NR", ib_cluster = "magazines", },
+  ["piercing-rounds-magazine"]        = {ib_let_badge = "PR", ib_cluster = "magazines", },
+  ["uranium-rounds-magazine"]         = {ib_let_badge = "UR", ib_cluster = "magazines", },
 
-  -- Shotgun Shells
-  ["shotgun-shell"]                   = {ib_let_badge = "SS", },
-  ["piercing-shotgun-shell"]          = {ib_let_badge = "PS", },
+  -- ib_cluster: shotgun-shells
+  ["shotgun-shell"]                   = {ib_let_badge = "SS", ib_cluster = "shotgun-shells", },
+  ["piercing-shotgun-shell"]          = {ib_let_badge = "PS", ib_cluster = "shotgun-shells", },
 
-  -- Rockets
-  ["rocket"]                          = {ib_let_badge = "R",  },
-  ["explosive-rocket"]                = {ib_let_badge = "Ex", },
-  ["atomic-bomb"]                     = {ib_let_badge = "AB", },
+  -- ib_cluster: rockets
+  ["rocket"]                          = {ib_let_badge = "R",  ib_cluster = "rockets", },
+  ["explosive-rocket"]                = {ib_let_badge = "Ex", ib_cluster = "rockets", },
+  ["atomic-bomb"]                     = {ib_let_badge = "AB", ib_cluster = "rockets", },
 
-  -- Cannon Shells
-  ["cannon-shell"]                    = {ib_let_badge = "C",  },
-  ["explosive-cannon-shell"]          = {ib_let_badge = "Ex", },
-  ["uranium-cannon-shell"]            = {ib_let_badge = "U",  },
-  ["explosive-uranium-cannon-shell"]  = {ib_let_badge = "UE", },
+  -- ib_cluster: cannon-shells
+  ["cannon-shell"]                    = {ib_let_badge = "C",  ib_cluster = "cannon-shells", },
+  ["explosive-cannon-shell"]          = {ib_let_badge = "Ex", ib_cluster = "cannon-shells", },
+  ["uranium-cannon-shell"]            = {ib_let_badge = "U",  ib_cluster = "cannon-shells", },
+  ["explosive-uranium-cannon-shell"]  = {ib_let_badge = "UE", ib_cluster = "cannon-shells", },
 }
 
 -- Capsule (throwables)
 badge_list["capsule"] = {
-  -- Grenades
-  ["grenade"]                         = {ib_let_badge = "G",  },
-  ["cluster-grenade"]                 = {ib_let_badge = "CG", },
+  -- ib_cluster: grenades
+  ["grenade"]                         = {ib_let_badge = "G",  ib_cluster = "grenades", },
+  ["cluster-grenade"]                 = {ib_let_badge = "CG", ib_cluster = "grenades", },
 
-  -- Capsules
-  ["poison-capsule"]                  = {ib_let_badge = "PC", },
-  ["slowdown-capsule"]                = {ib_let_badge = "SC", },
+  -- ib_cluster: capsules
+  ["poison-capsule"]                  = {ib_let_badge = "PC", ib_cluster = "capsules", },
+  ["slowdown-capsule"]                = {ib_let_badge = "SC", ib_cluster = "capsules", },
 
-  -- Specialty
-  ["cliff-explosives"]                = {ib_let_badge = "CE", },
+  -- ib_cluster: dynamites
+  ["cliff-explosives"]                = {ib_let_badge = "CE", ib_cluster = "dynamites", },
 }
 
 -- Planners
 badge_list["blueprint"] = {
-  ["blueprint"]                       = {ib_let_badge = "B", },
+  -- ib_cluster: blueprint
+  ["blueprint"]                       = {ib_let_badge = "B", ib_cluster = "blueprint", },
 }
 
 badge_list["upgrade-item"] = {
-  ["upgrade-planner"]                 = {ib_let_badge = "U",  },
+  -- ib_cluster: upgrade-item
+  ["upgrade-planner"]                 = {ib_let_badge = "U",  ib_cluster = "upgrade-item", },
 }
 
 badge_list["deconstruction-item"] = {
-  ["deconstruction-planner"]          = {ib_let_badge = "D",  },
+  -- ib_cluster: deconstruction-item
+  ["deconstruction-planner"]          = {ib_let_badge = "D",  ib_cluster = "deconstruction-item", },
 }
 
 -- Fluid prototype
 badge_list["fluid"] = {
-  ["crude-oil"]                       = {ib_let_badge = "C",  },
-  ["water"]                           = {ib_let_badge = "W",  },
-  ["light-oil"]                       = {ib_let_badge = "L",  },
-  ["heavy-oil"]                       = {ib_let_badge = "H",  },
-  ["lubricant"]                       = {ib_let_badge = "Lu"  },
-  ["petroleum-gas"]                   = {ib_let_badge = "P",  },
-  ["sulfuric-acid"]                   = {ib_let_badge = "SA", },
+  -- ib_cluster: fluids
+  ["crude-oil"]                       = {ib_let_badge = "C",  ib_cluster = "fluids", },
+  ["water"]                           = {ib_let_badge = "W",  ib_cluster = "fluids", },
+  ["light-oil"]                       = {ib_let_badge = "L",  ib_cluster = "fluids", },
+  ["heavy-oil"]                       = {ib_let_badge = "H",  ib_cluster = "fluids", },
+  ["lubricant"]                       = {ib_let_badge = "Lu", ib_cluster = "fluids", },
+  ["petroleum-gas"]                   = {ib_let_badge = "P",  ib_cluster = "fluids", },
+  ["sulfuric-acid"]                   = {ib_let_badge = "SA", ib_cluster = "fluids", },
 }
 
 -- Recipe prototype
 badge_list["recipe"] = {
-  -- Fill Barrels
-  ["crude-oil-barrel"]                = {ib_let_badge = "C",  ib_let_corner = "left-bottom"},
-  ["water-barrel"]                    = {ib_let_badge = "W",  ib_let_corner = "left-bottom"},
-  ["light-oil-barrel"]                = {ib_let_badge = "L",  ib_let_corner = "left-bottom"},
-  ["heavy-oil-barrel"]                = {ib_let_badge = "H",  ib_let_corner = "left-bottom"},
-  ["lubricant-barrel"]                = {ib_let_badge = "Lu", ib_let_corner = "left-bottom"},
-  ["petroleum-gas-barrel"]            = {ib_let_badge = "P",  ib_let_corner = "left-bottom"},
-  ["sulfuric-acid-barrel"]            = {ib_let_badge = "SA", ib_let_corner = "left-bottom"},
+  -- ib_cluster: fill-barrels
+  ["crude-oil-barrel"]                = {ib_let_badge = "C",  ib_cluster = "fill-barrels", ib_let_corner = "left-bottom"},
+  ["water-barrel"]                    = {ib_let_badge = "W",  ib_cluster = "fill-barrels", ib_let_corner = "left-bottom"},
+  ["light-oil-barrel"]                = {ib_let_badge = "L",  ib_cluster = "fill-barrels", ib_let_corner = "left-bottom"},
+  ["heavy-oil-barrel"]                = {ib_let_badge = "H",  ib_cluster = "fill-barrels", ib_let_corner = "left-bottom"},
+  ["lubricant-barrel"]                = {ib_let_badge = "Lu", ib_cluster = "fill-barrels", ib_let_corner = "left-bottom"},
+  ["petroleum-gas-barrel"]            = {ib_let_badge = "P",  ib_cluster = "fill-barrels", ib_let_corner = "left-bottom"},
+  ["sulfuric-acid-barrel"]            = {ib_let_badge = "SA", ib_cluster = "fill-barrels", ib_let_corner = "left-bottom"},
 
-  -- Empty Barrels
-  ["empty-crude-oil-barrel"]          = {ib_let_badge = "C",  ib_let_corner = "left-bottom"},
-  ["empty-water-barrel"]              = {ib_let_badge = "W",  ib_let_corner = "left-bottom"},
-  ["empty-light-oil-barrel"]          = {ib_let_badge = "L",  ib_let_corner = "left-bottom"},
-  ["empty-heavy-oil-barrel"]          = {ib_let_badge = "H",  ib_let_corner = "left-bottom"},
-  ["empty-lubricant-barrel"]          = {ib_let_badge = "Lu", ib_let_corner = "left-bottom"},
-  ["empty-petroleum-gas-barrel"]      = {ib_let_badge = "P",  ib_let_corner = "left-bottom"},
-  ["empty-sulfuric-acid-barrel"]      = {ib_let_badge = "SA", ib_let_corner = "left-bottom"},
+  -- ib_cluster: empty-barrels
+  ["empty-crude-oil-barrel"]          = {ib_let_badge = "C",  ib_cluster = "empty-barrels", ib_let_corner = "left-bottom"},
+  ["empty-water-barrel"]              = {ib_let_badge = "W",  ib_cluster = "empty-barrels", ib_let_corner = "left-bottom"},
+  ["empty-light-oil-barrel"]          = {ib_let_badge = "L",  ib_cluster = "empty-barrels", ib_let_corner = "left-bottom"},
+  ["empty-heavy-oil-barrel"]          = {ib_let_badge = "H",  ib_cluster = "empty-barrels", ib_let_corner = "left-bottom"},
+  ["empty-lubricant-barrel"]          = {ib_let_badge = "Lu", ib_cluster = "empty-barrels", ib_let_corner = "left-bottom"},
+  ["empty-petroleum-gas-barrel"]      = {ib_let_badge = "P",  ib_cluster = "empty-barrels", ib_let_corner = "left-bottom"},
+  ["empty-sulfuric-acid-barrel"]      = {ib_let_badge = "SA", ib_cluster = "empty-barrels", ib_let_corner = "left-bottom"},
 
-  -- Solid Fuel
-  ["solid-fuel-from-light-oil"]       = {ib_let_badge = "L",  ib_let_corner = "left-bottom"},
-  ["solid-fuel-from-heavy-oil"]       = {ib_let_badge = "H",  ib_let_corner = "left-bottom"},
-  ["solid-fuel-from-petroleum-gas"]   = {ib_let_badge = "P",  ib_let_corner = "left-bottom"},
+  -- ib_cluster: solid-fuel-recipes
+  ["solid-fuel-from-light-oil"]       = {ib_let_badge = "L",  ib_cluster = "solid-fuel-recipes", ib_let_corner = "left-bottom"},
+  ["solid-fuel-from-heavy-oil"]       = {ib_let_badge = "H",  ib_cluster = "solid-fuel-recipes", ib_let_corner = "left-bottom"},
+  ["solid-fuel-from-petroleum-gas"]   = {ib_let_badge = "P",  ib_cluster = "solid-fuel-recipes", ib_let_corner = "left-bottom"},
 
-  -- Misc
-  ["nuclear-fuel"]                    = {ib_let_badge = "NF", },
-  ["space-science-pack"]              = {ib_let_badge = "S", },
+  -- ib_cluster: rocket-fuels
+  ["nuclear-fuel"]                    = {ib_let_badge = "NF", ib_cluster = "rocket-fuels", },
+
+  -- ib_cluster: sciences
+  ["space-science-pack"]              = {ib_let_badge = "S", ib_cluster = "sciences", },
 }
 
 -- Signals
 badge_list["virtual-signal"] = {
-  -- Color squares
-  ["signal-red"]                      = {ib_let_badge = "R",   },
-  ["signal-green"]                    = {ib_let_badge = "Gn",  },
-  ["signal-pink"]                     = {ib_let_badge = "P",   },
-  ["signal-yellow"]                   = {ib_let_badge = "Y",   },
-  ["signal-white"]                    = {ib_let_badge = "W",   },
-  ["signal-grey"]                     = {ib_let_badge = "Gy",  },
-  ["signal-black"]                    = {ib_let_badge = "Bk",  },
-  ["signal-blue"]                     = {ib_let_badge = "Bl",  },
-  ["signal-cyan"]                     = {ib_let_badge = "C",   },
+  -- ib_cluster: color-squares
+  ["signal-red"]                      = {ib_let_badge = "R",   ib_cluster = "color-squares", },
+  ["signal-green"]                    = {ib_let_badge = "Gn",  ib_cluster = "color-squares", },
+  ["signal-pink"]                     = {ib_let_badge = "P",   ib_cluster = "color-squares", },
+  ["signal-yellow"]                   = {ib_let_badge = "Y",   ib_cluster = "color-squares", },
+  ["signal-white"]                    = {ib_let_badge = "W",   ib_cluster = "color-squares", },
+  ["signal-grey"]                     = {ib_let_badge = "Gy",  ib_cluster = "color-squares", },
+  ["signal-black"]                    = {ib_let_badge = "Bk",  ib_cluster = "color-squares", },
+  ["signal-blue"]                     = {ib_let_badge = "Bl",  ib_cluster = "color-squares", },
+  ["signal-cyan"]                     = {ib_let_badge = "C",   ib_cluster = "color-squares", },
 }
 
 -- "Signals" (these attach to icon data for prototypes that have them for use in signals)
 -- Enemy Signals
 badge_list["unit"] = {
-  -- Biters
-  ["small-biter"]                     = {ib_let_badge = "1", },
-  ["medium-biter"]                    = {ib_let_badge = "2", },
-  ["big-biter"]                       = {ib_let_badge = "3", },
-  ["behemoth-biter"]                  = {ib_let_badge = "4", },
+  -- ib_cluster: biters
+  ["small-biter"]                     = {ib_let_badge = "1",   ib_cluster = "biters", },
+  ["medium-biter"]                    = {ib_let_badge = "2",   ib_cluster = "biters", },
+  ["big-biter"]                       = {ib_let_badge = "3",   ib_cluster = "biters", },
+  ["behemoth-biter"]                  = {ib_let_badge = "4",   ib_cluster = "biters", },
 
-  -- Spitters
-  ["small-spitter"]                   = {ib_let_badge = "1", },
-  ["medium-spitter"]                  = {ib_let_badge = "2", },
-  ["big-spitter"]                     = {ib_let_badge = "3", },
-  ["behemoth-spitter"]                = {ib_let_badge = "4", },
+  -- ib_cluster: spitters
+  ["small-spitter"]                   = {ib_let_badge = "1",   ib_cluster = "spitters"},
+  ["medium-spitter"]                  = {ib_let_badge = "2",   ib_cluster = "spitters"},
+  ["big-spitter"]                     = {ib_let_badge = "3",   ib_cluster = "spitters"},
+  ["behemoth-spitter"]                = {ib_let_badge = "4",   ib_cluster = "spitters"},
 }
 
 -- Worm Signals
 badge_list["turret"] = {
-  -- Worms
-  ["small-worm-turret"]                   = {ib_let_badge = "1", },
-  ["medium-worm-turret"]                  = {ib_let_badge = "2", },
-  ["big-worm-turret"]                     = {ib_let_badge = "3", },
-  ["behemoth-worm-turret"]                = {ib_let_badge = "4", },
+  -- ib_cluster: worms
+  ["small-worm-turret"]                   = {ib_let_badge = "1",   ib_cluster = "worms", },
+  ["medium-worm-turret"]                  = {ib_let_badge = "2",   ib_cluster = "worms", },
+  ["big-worm-turret"]                     = {ib_let_badge = "3",   ib_cluster = "worms", },
+  ["behemoth-worm-turret"]                = {ib_let_badge = "4",   ib_cluster = "worms", },
 }
 
 return badge_list

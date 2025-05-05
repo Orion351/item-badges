@@ -178,9 +178,9 @@ Ib_global.item_types = defines.prototypes.item
 
 Ib_global.colors_string = "PBGYORwgb"
 
-Ib_global.color_purple  = settings.startup["ib-color_purple"].value
-Ib_global.color_blue    = settings.startup["ib-color_blue"].value
-Ib_global.color_green   = settings.startup["ib-color_green"].value
-Ib_global.color_yellow  = settings.startup["ib-color_yellow"].value
-Ib_global.color_orange  = settings.startup["ib-color_orange"].value
-Ib_global.color_red     = settings.startup["ib-color_red"].value
+Ib_global.color_purple  = settings.startup["ib-color-purple"].value
+Ib_global.color_blue    = settings.startup["ib-color-blue"].value
+Ib_global.color_green   = settings.startup["ib-color-green"].value
+Ib_global.color_yellow  = settings.startup["ib-color-yellow"].value
+Ib_global.color_orange  = settings.startup["ib-color-orange"].value
+Ib_global.color_red     = settings.startup["ib-color-red"].value

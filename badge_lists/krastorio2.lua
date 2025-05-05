@@ -205,8 +205,8 @@ badge_list["ammo"] = {
 }
 
 badge_list["capsule"] = {
-  -- ib_cluster: poison-capsules
-  ["kr-biter-virus"]                                 = {ib_let_badge = "BV",  ib_cluster = "poison-capsules", },
+  -- ib_cluster: capsules
+  ["kr-biter-virus"]                                 = {ib_let_badge = "BV",  ib_cluster = "capsules", },
 }
 
 badge_list["blueprint"] = {
