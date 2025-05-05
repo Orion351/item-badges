@@ -165,6 +165,7 @@ Ib_global.item_types = defines.prototypes.item
 
 -- Color String
 --   If a badge has the ib_colors_string property, it will check whether or not each color is 'turned on' in the option menus, and if any of them are, it will draw it. Otherwise, it won't.
+--   The exception are white, grey and black badges -- if any item in a ib_cluster is active, then any badge with white, grey or black will be badged.
 --   P = Purple
 --   B = Blue
 --   G = Green
@@ -174,4 +175,12 @@ Ib_global.item_types = defines.prototypes.item
 --   w = White
 --   g = Grey
 --   b = Black
+
 Ib_global.colors_string = "PBGYORwgb"
+
+Ib_global.color_purple  = settings.startup["ib-color_purple"].value
+Ib_global.color_blue    = settings.startup["ib-color_blue"].value
+Ib_global.color_green   = settings.startup["ib-color_green"].value
+Ib_global.color_yellow  = settings.startup["ib-color_yellow"].value
+Ib_global.color_orange  = settings.startup["ib-color_orange"].value
+Ib_global.color_red     = settings.startup["ib-color_red"].value

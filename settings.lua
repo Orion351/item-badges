@@ -27,4 +27,40 @@ data:extend({
     default_value = 1.0,
     allowed_values = {0.25, 0.5, 0.75, 1.0},
   },
+  { -- Color: Purple
+  type = "bool-setting",
+  name = "ib-color-purple",
+  setting_type = "startup",
+  default_value = true
+  },
+  { -- Color: Blue
+  type = "bool-setting",
+  name = "ib-color-blue",
+  setting_type = "startup",
+  default_value = true
+  },
+  { -- Color: Green
+  type = "bool-setting",
+  name = "ib-color-green",
+  setting_type = "startup",
+  default_value = true
+  },
+  { -- Color: Yellow
+  type = "bool-setting",
+  name = "ib-color-yellow",
+  setting_type = "startup",
+  default_value = true
+  },
+  { -- Color: Orange
+  type = "bool-setting",
+  name = "ib-color-orange",
+  setting_type = "startup",
+  default_value = true
+  },
+  { -- Color: Red
+  type = "bool-setting",
+  name = "ib-color-red",
+  setting_type = "startup",
+  default_value = true
+  },
 })
