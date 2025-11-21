@@ -160,6 +160,11 @@ badge_list["capsule"] = {
 
   -- ib_cluster: dynamites
   ["cliff-explosives"]                = {ib_let_badge = "CE",  ib_colors_string = "B",  ib_cluster = "dynamites", },
+
+  -- ib_cluster: bot-capsule
+  ["defender-capsule"]                = {ib_let_badge = "Def", ib_colors_string = "B",  ib_cluster = "bot-capsule", },
+  ["distractor-capsule"]              = {ib_let_badge = "Dis", ib_colors_string = "Y",  ib_cluster = "bot-capsule", },
+  ["destroyer-capsule"]               = {ib_let_badge = "Des", ib_colors_string = "R",  ib_cluster = "bot-capsule", },
 }
 
 -- Planners
