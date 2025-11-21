@@ -266,6 +266,10 @@ badge_list["turret"] = {
   ["behemoth-worm-turret"]            = {ib_let_badge = "4",   ib_colors_string = "G",  ib_cluster = "worms", },
 }
 
+badge_list["item-with-entity-data"] = {}
+
+badge_list["armor"] = {}
+
 return badge_list
 
 
