@@ -240,6 +240,15 @@ badge_list["fluid"] = {
 
 -- Recipe prototype
 badge_list["recipe"] = {
+-- ib_cluster: crush-inserters
+  ["kr-crush-kr-superior-inserter"]                  = {ib_let_badge = "Su",  ib_colors_string = "g",  ib_cluster = "crush-inserters", },
+  ["kr-crush-kr-superior-long-inserter"]             = {ib_let_badge = "SuL", ib_colors_string = "g",  ib_cluster = "crush-inserters", },
+  ["kr-crush-burner-inserter"]                       = {ib_let_badge = "B",   ib_colors_string = "g",  ib_cluster = "crush-inserters", },
+  ["kr-crush-inserter"]                              = {ib_let_badge = "I",   ib_colors_string = "Y",  ib_cluster = "crush-inserters", },
+  ["kr-crush-fast-inserter"]                         = {ib_let_badge = "F",   ib_colors_string = "B",  ib_cluster = "crush-inserters", },
+  ["kr-crush-long-handed-inserter"]                  = {ib_let_badge = "LH",  ib_colors_string = "R",  ib_cluster = "crush-inserters", },
+  ["kr-crush-bulk-inserter"]                         = {ib_let_badge = "Bk",  ib_colors_string = "G",  ib_cluster = "crush-inserters", },
+
   -- ib_cluster: enriched-ore-from-regular-ore
   ["kr-enriched-iron"]                               = {ib_let_badge = "Fe",  ib_colors_string = "B",  ib_cluster = "enriched-ore-from-regular-ore", },        -- "enriched-iron"
   ["kr-enriched-copper"]                             = {ib_let_badge = "Cu",  ib_colors_string = "O",  ib_cluster = "enriched-ore-from-regular-ore", },        -- "enriched-copper"
