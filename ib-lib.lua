@@ -747,8 +747,9 @@ end
 function Process_badge_list(list)
   for sub_list_name, sub_list in pairs(list) do
     for item_name, ib_data in pairs(sub_list) do
-      if data.raw[sub_list_name][item_name] then
-        Build_badge(data.raw[sub_list_name][item_name], ib_data)
+      local prototypes = data.raw[sub_list_name] or {}
+      if prototypes[item_name] then
+        Build_badge(prototypes[item_name], ib_data)
       elseif Ib_global.log_errors then
         log(Ib_global.log_prefix .. "Item " .. item_name .. " not found in data.raw[" .. sub_list_name .. "]")
       end
